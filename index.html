@@ -1,0 +1,1446 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027</title>
+<meta name="description" content="ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027 · From Mindset to Action">
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+  --orange:#ff5a1f;
+  --orange-dark:#e84810;
+  --orange-soft:#ffebe3;
+  --cream:#f5f2eb;
+  --cream2:#ece8df;
+  --black:#111111;
+  --black2:#1a1a1a;
+  --white:#ffffff;
+  --gray:#6e6d68;
+  --line:#d7d2c8;
+  --line-dark:#303030;
+  --max:1320px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--black);
+  font-family:"Inter","Pretendard","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  letter-spacing:-.03em;
+  -webkit-font-smoothing:antialiased;
+}
+html[lang="ko"] body{
+  font-family:"Pretendard","Inter","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(var(--max),calc(100% - 52px));margin:0 auto}
+.section{padding:112px 0}
+.section.dark{background:var(--black);color:var(--white)}
+.section.cream{background:var(--cream);color:var(--black)}
+.section.white{background:var(--white);color:var(--black)}
+.section.orange{background:var(--orange);color:var(--black)}
+.reveal{opacity:0;transform:translateY(18px);transition:.5s ease}
+.reveal.on{opacity:1;transform:none}
+.kicker{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.15em;
+  color:var(--orange);
+  text-transform:uppercase
+}
+.dark .kicker{color:#ff8152}
+.orange .kicker{color:#7e2608}
+
+.section-head{
+  display:grid;
+  grid-template-columns:190px minmax(0,1fr);
+  gap:44px;
+  align-items:start;
+  margin-bottom:48px
+}
+.section-head h2{
+  margin:0;
+  font-size:clamp(38px,4.6vw,64px);
+  line-height:1.04;
+  font-weight:800;
+  letter-spacing:-.045em
+}
+.section-head p{
+  margin:18px 0 0;
+  max-width:850px;
+  color:var(--gray);
+  font-size:15px;
+  line-height:1.7
+}
+.dark .section-head p{color:#aaa8a3}
+.orange .section-head p{color:#5e250f}
+.panel{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--white)
+}
+.dark .panel{
+  background:var(--black2);
+  border-color:var(--line-dark)
+}
+.btn{
+  min-height:48px;
+  padding:0 19px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.03em;
+  border:1px solid currentColor
+}
+.btn.primary{background:var(--orange);border-color:var(--orange);color:#fff}
+.btn.dark{background:var(--black);border-color:var(--black);color:#fff}
+.btn.secondary{background:transparent}
+.hero-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:28px}
+
+/* NAV */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:72px;
+  background:rgba(245,242,235,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line)
+}
+.nav-inner{
+  height:100%;
+  width:min(1420px,calc(100% - 40px));
+  margin:auto;
+  display:flex;align-items:center;gap:18px
+}
+.brand{margin-right:auto;font-size:12px;font-weight:900}
+.brand span{color:var(--orange)}
+.menu{display:flex;gap:17px;font-size:9px;font-weight:800;color:#5e5b55}
+.menu a:hover{color:var(--orange)}
+.lang-toggle{
+  display:flex;
+  border:1px solid var(--line);
+  border-radius:999px;
+  overflow:hidden;
+  background:#fff
+}
+.lang-btn{
+  border:0;
+  background:transparent;
+  padding:8px 11px;
+  font-size:9px;
+  font-weight:900;
+  color:#7a7770;
+  cursor:pointer
+}
+.lang-btn.active{background:var(--black);color:#fff}
+.nav-cta{
+  padding:10px 15px;
+  border-radius:999px;
+  background:var(--orange);
+  color:#fff;
+  font-size:9px;
+  font-weight:900
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  padding-top:72px;
+  background:var(--cream);
+  display:flex;
+  align-items:center
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.13fr .87fr;
+  gap:32px;
+  align-items:stretch;
+  padding:68px 0 62px
+}
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:22px 0
+}
+.hero-label{
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.15em;
+  color:var(--orange);
+  margin-bottom:25px
+}
+.hero h1{
+  margin:0;
+  font-size:clamp(52px,6.7vw,98px);
+  line-height:.9;
+  font-weight:800;
+  letter-spacing:-.055em
+}
+.hero h1 .accent{color:var(--orange)}
+.hero-subtitle{
+  margin-top:28px;
+  font-size:clamp(20px,1.9vw,28px);
+  font-weight:700;
+  letter-spacing:-.025em
+}
+.hero-desc{
+  margin-top:13px;
+  max-width:700px;
+  color:var(--gray);
+  font-size:15px;
+  line-height:1.68
+}
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:28px
+}
+.meta-pill{
+  padding:9px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  font-size:10px;
+  font-weight:800
+}
+.hero-side{
+  min-height:620px;
+  overflow:hidden;
+  border-radius:26px;
+  background:var(--black)
+}
+.hero-photo{height:calc(100% - 112px);min-height:500px;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.88)}
+.hero-info{
+  min-height:112px;
+  padding:24px 26px;
+  background:var(--orange);
+  color:#fff
+}
+.hero-info b{
+  display:block;
+  margin-bottom:7px;
+  font-size:9px;
+  letter-spacing:.11em;
+  opacity:.78
+}
+.hero-info strong{font-size:23px;line-height:1.12}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:16px}
+.about-copy{padding:30px}
+.about-copy h3{
+  margin:12px 0 16px;
+  font-size:clamp(30px,3.5vw,48px);
+  line-height:1.02;
+  letter-spacing:-.055em
+}
+.about-copy p{margin:0;color:#aaa8a3;font-size:14px;line-height:1.7}
+.framework{padding:28px}
+.framework-top{display:flex;justify-content:space-between;gap:18px;align-items:flex-end}
+.framework-top h3{margin:7px 0 0;font-size:28px}
+.framework-top span{font-size:10px;color:#98958f}
+.framework-flow{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:9px;
+  margin-top:23px
+}
+.flow-card{
+  min-height:170px;
+  padding:18px;
+  border-radius:14px;
+  background:#242424;
+  border:1px solid #303030
+}
+.flow-card.action{
+  background:var(--orange);
+  border-color:var(--orange);
+  color:#fff
+}
+.flow-card .n{font-size:9px;font-weight:900;opacity:.55}
+.flow-card h4{margin:38px 0 8px;font-size:17px}
+.flow-card p{margin:0;color:#aaa8a3;font-size:11px;line-height:1.5}
+.flow-card.action p{color:#ffe3d8}
+.environment{
+  display:grid;
+  grid-template-columns:1.25fr repeat(5,1fr);
+  align-items:center;
+  gap:0;
+  margin-top:16px;
+  padding:0 18px;
+  min-height:64px;
+  border:1px dashed rgba(255,129,82,.42);
+  border-radius:20px;
+  color:#ffb196;
+  font-size:12px;
+  font-weight:800
+}
+.environment span{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:62px;
+  text-align:center
+}
+.environment .env-label{
+  justify-content:flex-start;
+  font-size:13px;
+  font-weight:900
+}
+.environment .env-item{
+  font-size:12px;
+  font-weight:800
+}
+
+/* VISION */
+.vision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.vision-card{min-height:245px;padding:28px}
+.vision-card .orb{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--orange)
+}
+.vision-card h3{
+  margin:43px 0 10px;
+  font-size:34px;
+  font-weight:900;
+  letter-spacing:-.05em
+}
+.vision-card p{margin:0;color:#65625c;font-size:13px;line-height:1.65}
+
+/* OVERVIEW */
+.overview-title{
+  display:grid;
+  grid-template-columns:190px 1fr;
+  gap:44px;
+  margin-bottom:42px
+}
+.overview-title h3{
+  margin:0;
+  font-size:clamp(38px,4.8vw,64px);
+  line-height:1.02;
+  font-weight:800;
+  letter-spacing:-.04em
+}
+.overview-title p{margin:14px 0 0;color:#aaa8a3;font-size:15px;line-height:1.7;max-width:850px}
+.overview-layout{display:grid;grid-template-columns:1.12fr .88fr;gap:16px}
+.overview-grid{
+  display:grid!important;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  border:0!important;
+  background:transparent!important
+}
+.fact{
+  min-height:122px;
+  padding:18px;
+  border-radius:14px;
+  background:#1b1b1b;
+  border:1px solid #2b2b2b
+}
+.fact b{display:block;color:#ff8152;font-size:9px;margin-bottom:8px}
+.fact strong{display:block;font-size:16px;line-height:1.35}
+.fact span{display:block;margin-top:6px;color:#9b9892;font-size:11px;line-height:1.45}
+.side-box{
+  padding:28px;
+  background:var(--orange);
+  color:#fff;
+  border:0;
+  border-radius:18px
+}
+.side-box .kicker{color:#ffe1d5}
+.side-box h3{
+  margin:12px 0 12px;
+  font-size:32px;
+  line-height:1.03;
+  letter-spacing:-.055em
+}
+.side-box p{margin:0;color:#ffe7dd;font-size:13px;line-height:1.65}
+.partner-cards{display:grid;gap:7px;margin-top:20px}
+.partner-card{
+  padding:14px 0;
+  border:0;
+  border-bottom:1px solid rgba(255,255,255,.26);
+  border-radius:0;
+  background:transparent
+}
+.partner-card b{display:block;color:#ffe1d5;font-size:8px;margin-bottom:5px}
+.partner-card strong{font-size:14px}
+.partner-card span{display:block;color:#ffe7dd;font-size:11px;margin-top:4px}
+.side-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+
+/* PROGRAM */
+.tab-nav{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-bottom:12px
+}
+.tab-btn{
+  cursor:pointer;
+  text-align:left;
+  padding:22px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--black)
+}
+.tab-btn.active{
+  background:var(--orange);
+  border-color:var(--orange);
+  color:#fff
+}
+.tab-btn small{display:block;color:var(--orange);font-size:9px;font-weight:900}
+.tab-btn.active small{color:#ffe5dc}
+.tab-btn strong{
+  display:block;
+  margin-top:24px;
+  font-size:21px;
+  font-weight:900;
+  letter-spacing:-.04em
+}
+.tab-btn span{
+  display:block;
+  margin-top:6px;
+  color:#6d6962;
+  font-size:12px;
+  line-height:1.45
+}
+.tab-btn.active span{color:#ffe8df}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.program-panel{padding:26px}
+.program-grid{display:grid;grid-template-columns:.76fr 1.24fr;gap:18px}
+.program-overview h3{margin:9px 0 8px;font-size:44px;letter-spacing:-.055em}
+.program-overview .verb{font-size:11px;font-weight:900;color:#b93f13}
+.program-overview p{font-size:13px;color:#67635d;line-height:1.62}
+.program-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.program-item{
+  min-height:108px;
+  padding:18px;
+  border-radius:12px;
+  background:#faf9f5;
+  border:1px solid var(--line)
+}
+.program-item b{display:block;color:var(--orange);font-size:9px}
+.program-item strong{display:block;margin-top:24px;font-size:14px}
+
+/* SPEAKERS */
+.speaker-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}
+.keynote{padding:30px}
+.keynote-badge{
+  display:inline-block;
+  padding:7px 9px;
+  border-radius:999px;
+  background:var(--orange);
+  color:#fff;
+  font-size:9px;
+  font-weight:900
+}
+.keynote h3{
+  margin:23px 0 10px;
+  font-size:clamp(38px,4.5vw,60px);
+  line-height:1.0;
+  letter-spacing:-.045em
+}
+.keynote .role{font-size:13px;color:#ddd9d3;font-weight:700}
+.keynote p{font-size:13px;color:#aaa8a3;line-height:1.66}
+.keynote-topic{margin-top:26px;padding-top:16px;border-top:1px solid #303030}
+.keynote-topic b{display:block;color:#ff8152;font-size:9px;margin-bottom:5px}
+.keynote-topic strong{font-size:15px}
+.speaker-stack{display:grid;gap:8px}
+.speaker-card{padding:17px 19px}
+.speaker-card-grid{display:grid;grid-template-columns:72px 1fr auto;gap:12px}
+.country{color:#ff8152;font-size:9px;font-weight:900}
+.speaker-card strong{font-size:14px}
+.speaker-card p{margin:5px 0 0;color:#9d9a94;font-size:11px}
+.status{
+  padding:5px 7px;
+  border-radius:999px;
+  border:1px solid #3a3a3a;
+  color:#ff8152;
+  font-size:8px
+}
+
+/* SCHEDULE */
+.schedule{display:grid;gap:8px}
+.time-row{display:grid;grid-template-columns:130px 1fr;gap:10px}
+.time{
+  padding:18px;
+  text-align:center;
+  border-radius:12px;
+  background:var(--orange-soft);
+  border:1px solid #ffd1c0;
+  color:#a9360d;
+  font-size:12px;
+  font-weight:900
+}
+.session{padding:18px 20px}
+.session strong{font-size:16px}
+.parallel{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:12px}
+.track{
+  padding:11px;
+  border-radius:10px;
+  background:#f7f4ed;
+  border:1px solid var(--line)
+}
+.track b{display:block;color:var(--orange);font-size:8px;margin-bottom:4px}
+.track span{font-size:10px;color:#625f59}
+
+/* ASIA */
+.asia-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.asia-card{
+  min-height:410px;
+  padding:21px;
+  display:flex;
+  flex-direction:column
+}
+.asia-card>b{font-size:9px;color:#ff8152}
+.asia-card h3{margin:26px 0 16px;font-size:28px;letter-spacing:-.05em}
+.asia-axis{padding:13px 0;border-top:1px solid #303030}
+.asia-axis b{display:block;color:#ff8152;font-size:8px;margin-bottom:6px}
+.asia-axis strong{font-size:12px;line-height:1.5;color:#dfdcd6}
+.asia-axis.action strong{color:#ff9c79;font-size:13px}
+
+/* WHO */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.who-card{min-height:165px;padding:21px}
+.who-card b{display:block;color:var(--orange);font-size:8px;margin-bottom:28px}
+.who-card strong{font-size:16px}
+.who-card p{margin:7px 0 0;color:#615e58;font-size:11px;line-height:1.5}
+
+/* CTA */
+.register{
+  padding:110px 0;
+  background:var(--orange);
+  color:#fff
+}
+.register .kicker{color:#ffe4da!important}
+.register h2{
+  margin:0;
+  font-size:clamp(48px,6.8vw,92px);
+  line-height:.96;
+  letter-spacing:-.05em;
+  font-weight:800
+}
+.register p{margin-top:23px;max-width:720px;color:#ffe8df;font-size:15px;line-height:1.68}
+.register .btn.primary{
+  background:#fff;
+  border-color:#fff;
+  color:var(--black)
+}
+.register .btn.secondary{
+  background:transparent;
+  border-color:#fff;
+  color:#fff
+}
+
+footer{
+  padding:32px 0;
+  background:var(--black);
+  color:#98958f;
+  font-size:10px
+}
+.footer-grid{display:flex;justify-content:space-between;gap:20px}
+.footer-grid strong{color:#fff}
+
+@media(max-width:1080px){
+  .menu{display:none}
+  .hero-grid,.section-head,.overview-title,.about-grid,.overview-layout,.speaker-layout,.program-grid{grid-template-columns:1fr}
+  .framework-flow,.vision-grid,.who-grid{grid-template-columns:1fr 1fr}
+  .asia-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .wrap{width:min(var(--max),calc(100% - 26px))}
+  .section{padding:78px 0}
+  .hero-grid{display:block;padding-top:52px}
+  .hero h1{font-size:56px}
+  .hero-copy{padding-bottom:34px}
+  .hero-side{min-height:430px}
+  .framework-flow,.vision-grid,.overview-grid,.tab-nav,.program-list,.who-grid,.asia-grid{grid-template-columns:1fr}
+  .environment{grid-template-columns:1fr 1fr;padding:8px 12px}
+  .environment .env-label{grid-column:1/-1;justify-content:center;border-bottom:1px dashed rgba(255,129,82,.25)}
+  .time-row,.speaker-card-grid{grid-template-columns:1fr}
+  .parallel{grid-template-columns:1fr}
+  .footer-grid{flex-direction:column}
+  .nav-cta{display:none}
+}
+
+/* Typography refinement for readability */
+.hero h1,
+.section-head h2,
+.overview-title h3,
+.keynote h3,
+.register h2{
+  font-family:"Inter","Pretendard","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-stretch:normal;
+}
+html[lang="ko"] .hero h1,
+html[lang="ko"] .section-head h2,
+html[lang="ko"] .overview-title h3,
+html[lang="ko"] .keynote h3,
+html[lang="ko"] .register h2{
+  font-family:"Pretendard","Inter","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.hero h1{
+  max-width:920px;
+}
+.section-head h2{
+  max-width:980px;
+}
+#about .section-head h2{
+  max-width:930px;
+}
+html[lang="en"] #about .section-head h2{
+  font-size:clamp(34px,4.2vw,58px);
+  line-height:1.08;
+  letter-spacing:-.035em;
+  max-width:1000px;
+}
+html[lang="en"] .hero h1{
+  font-size:clamp(50px,6.3vw,92px);
+  line-height:.94;
+  letter-spacing:-.045em;
+}
+@media(max-width:680px){
+  .hero h1{font-size:48px;line-height:.94}
+  .section-head h2{font-size:36px;line-height:1.06}
+  html[lang="en"] #about .section-head h2{font-size:32px}
+}
+
+
+/* v15 — refined typography scale */
+:root{
+  --fs-hero:clamp(54px,5.9vw,86px);
+  --fs-section:clamp(40px,4.3vw,56px);
+  --fs-section-en:clamp(36px,3.9vw,52px);
+  --fs-subsection:clamp(28px,2.7vw,36px);
+  --fs-card:clamp(18px,1.6vw,23px);
+  --fs-body:15px;
+  --fs-small:12px;
+}
+
+/* HERO */
+.hero h1{
+  font-size:var(--fs-hero) !important;
+  line-height:.94 !important;
+  letter-spacing:-.045em !important;
+  font-weight:800 !important;
+  max-width:900px;
+}
+.hero-subtitle{
+  font-size:clamp(19px,1.7vw,25px) !important;
+  line-height:1.16 !important;
+  letter-spacing:-.02em !important;
+  font-weight:700 !important;
+}
+.hero-desc{
+  font-size:15px !important;
+  line-height:1.68 !important;
+  max-width:660px !important;
+}
+
+/* MAIN SECTION HEADLINES */
+.section-head h2{
+  font-size:var(--fs-section) !important;
+  line-height:1.06 !important;
+  letter-spacing:-.038em !important;
+  font-weight:800 !important;
+  max-width:900px !important;
+}
+html[lang="en"] .section-head h2{
+  font-size:var(--fs-section-en) !important;
+  line-height:1.08 !important;
+  letter-spacing:-.03em !important;
+  max-width:940px !important;
+}
+.section-head p{
+  font-size:15px !important;
+  line-height:1.72 !important;
+  max-width:820px !important;
+}
+
+/* OVERVIEW / KEYNOTE / CTA */
+.overview-title h3{
+  font-size:clamp(38px,4.1vw,54px) !important;
+  line-height:1.04 !important;
+  letter-spacing:-.035em !important;
+  font-weight:800 !important;
+}
+.keynote h3{
+  font-size:clamp(36px,3.8vw,50px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.035em !important;
+  font-weight:800 !important;
+}
+.register h2{
+  font-size:clamp(48px,5.9vw,78px) !important;
+  line-height:.98 !important;
+  letter-spacing:-.04em !important;
+  font-weight:800 !important;
+}
+
+/* SUBSECTION TITLES */
+.about-copy h3,
+.framework-top h3,
+.side-box h3{
+  font-size:var(--fs-subsection) !important;
+  line-height:1.08 !important;
+  letter-spacing:-.035em !important;
+  font-weight:800 !important;
+}
+.program-overview h3{
+  font-size:clamp(30px,3vw,40px) !important;
+  line-height:1 !important;
+  letter-spacing:-.04em !important;
+}
+.vision-card h3{
+  font-size:clamp(26px,2.4vw,32px) !important;
+}
+.asia-card h3{
+  font-size:clamp(23px,2vw,27px) !important;
+}
+
+/* CARDS */
+.flow-card h4{
+  font-size:18px !important;
+  line-height:1.2 !important;
+}
+.fact strong,
+.who-card strong,
+.speaker-card strong{
+  font-size:15px !important;
+  line-height:1.4 !important;
+}
+.program-item strong{
+  font-size:14px !important;
+  line-height:1.45 !important;
+}
+.tab-btn strong{
+  font-size:19px !important;
+  line-height:1.25 !important;
+}
+.tab-btn span,
+.flow-card p,
+.fact span,
+.who-card p,
+.asia-axis strong,
+.speaker-card p{
+  line-height:1.5 !important;
+}
+
+/* English-specific balance */
+html[lang="en"] .hero h1{
+  font-size:clamp(50px,5.5vw,80px) !important;
+  line-height:.98 !important;
+  letter-spacing:-.035em !important;
+}
+html[lang="en"] #about .section-head h2{
+  font-size:clamp(34px,3.6vw,48px) !important;
+  line-height:1.1 !important;
+  max-width:900px !important;
+}
+html[lang="en"] .overview-title h3{
+  font-size:clamp(36px,3.8vw,50px) !important;
+}
+
+/* More breathing room in headline blocks */
+.section-head{
+  grid-template-columns:180px minmax(0,1fr) !important;
+  gap:42px !important;
+}
+.overview-title{
+  grid-template-columns:180px minmax(0,1fr) !important;
+  gap:42px !important;
+}
+
+/* Mobile scale */
+@media(max-width:680px){
+  .hero h1{
+    font-size:44px !important;
+    line-height:.98 !important;
+  }
+  html[lang="en"] .hero h1{
+    font-size:42px !important;
+  }
+  .section-head h2{
+    font-size:34px !important;
+    line-height:1.08 !important;
+  }
+  html[lang="en"] .section-head h2{
+    font-size:31px !important;
+  }
+  .overview-title h3{
+    font-size:34px !important;
+  }
+  .keynote h3{
+    font-size:34px !important;
+  }
+  .register h2{
+    font-size:42px !important;
+  }
+  .about-copy h3,
+  .framework-top h3,
+  .side-box h3{
+    font-size:27px !important;
+  }
+}
+
+
+/* v16 — layout polish */
+
+/* Keep the hero symposium description on one line on desktop */
+.hero-desc{
+  max-width:none !important;
+  white-space:nowrap;
+  font-size:14px !important;
+  letter-spacing:-.018em !important;
+}
+html[lang="en"] .hero-desc{
+  font-size:13.5px !important;
+}
+
+/* Program item typography: clearer and larger across all 3 tracks */
+.program-item{
+  min-height:124px !important;
+  padding:20px !important;
+}
+.program-item b{
+  font-size:10px !important;
+}
+.program-item strong{
+  font-size:17px !important;
+  line-height:1.35 !important;
+  font-weight:800 !important;
+  margin-top:26px !important;
+}
+
+/* Slightly increase tab labels too */
+.tab-btn strong{
+  font-size:21px !important;
+  line-height:1.22 !important;
+}
+.tab-btn span{
+  font-size:13px !important;
+  line-height:1.5 !important;
+}
+
+/* TBC status alignment */
+.speaker-card-grid{
+  grid-template-columns:76px minmax(0,1fr) 72px !important;
+  align-items:center !important;
+}
+.status{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-width:64px !important;
+  min-height:34px !important;
+  padding:0 10px !important;
+  border-radius:999px !important;
+  font-size:9px !important;
+  font-weight:800 !important;
+  text-align:center !important;
+  justify-self:center !important;
+}
+.keynote-badge{
+  display:flex !important;
+  width:max-content !important;
+  min-height:34px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 12px !important;
+}
+
+/* Responsive fallback */
+@media(max-width:1100px){
+  .hero-desc{
+    white-space:normal;
+    max-width:760px !important;
+  }
+}
+@media(max-width:680px){
+  .speaker-card-grid{
+    grid-template-columns:1fr !important;
+  }
+  .status{
+    justify-self:start !important;
+  }
+  .program-item strong{
+    font-size:16px !important;
+  }
+}
+
+
+/* v17 — move symposium description to Overview */
+.overview-title{
+  align-items:start !important;
+}
+.overview-title > div:last-child{
+  min-width:0;
+}
+.overview-desc{
+  margin:14px 0 0 !important;
+  max-width:none !important;
+  white-space:nowrap;
+  font-size:14px !important;
+  line-height:1.5 !important;
+  letter-spacing:-.018em !important;
+}
+html[lang="en"] .overview-desc{
+  font-size:13.5px !important;
+}
+
+/* Hero no longer carries the long symposium description */
+.hero-copy{
+  justify-content:center;
+}
+
+@media(max-width:1100px){
+  .overview-desc{
+    white-space:normal;
+    max-width:900px !important;
+  }
+}
+
+
+/* v18 — increase text size in the 3 program description blocks */
+.program-overview .verb{
+  font-size:12.5px !important;
+  line-height:1.45 !important;
+}
+.program-overview p{
+  font-size:14px !important;
+  line-height:1.68 !important;
+}
+@media(max-width:680px){
+  .program-overview .verb{
+    font-size:12px !important;
+  }
+  .program-overview p{
+    font-size:13.5px !important;
+  }
+}
+
+
+/* v19 — align overview title and description to the same left edge */
+.overview-title{
+  display:grid !important;
+  grid-template-columns:180px minmax(0,1fr) !important;
+  gap:42px !important;
+  align-items:start !important;
+}
+.overview-copy{
+  min-width:0;
+  text-align:left !important;
+}
+.overview-copy h3{
+  margin:0 !important;
+  text-align:left !important;
+}
+.overview-copy .overview-desc{
+  display:block;
+  margin:14px 0 0 !important;
+  padding:0 !important;
+  text-align:left !important;
+  max-width:none !important;
+  width:100% !important;
+}
+html[lang="en"] .overview-copy .overview-desc{
+  text-align:left !important;
+}
+
+@media(max-width:1080px){
+  .overview-title{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">ACT-PRENEUR <span>INTERNATIONAL SYMPOSIUM 2027</span></div>
+    <div class="menu">
+      <a href="#about" data-ko="소개" data-en="ABOUT">소개</a>
+      <a href="#vision" data-ko="비전" data-en="VISION">비전</a>
+      <a href="#overview" data-ko="개요" data-en="OVERVIEW">개요</a>
+      <a href="#works" data-ko="프로그램" data-en="PROGRAM">프로그램</a>
+      <a href="#speakers" data-ko="연사" data-en="SPEAKERS">연사</a>
+      <a href="#schedule" data-ko="일정" data-en="SCHEDULE">일정</a>
+      <a href="#asia" data-ko="아시아" data-en="ASIA">아시아</a>
+      <a href="#who" data-ko="참가자" data-en="WHO">참가자</a>
+    </div>
+    
+<div class="lang-toggle" aria-label="Language">
+  <button class="lang-btn active" data-lang="ko">KO</button>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+<a class="nav-cta" href="#register" data-ko="등록" data-en="REGISTER">등록</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <div class="hero-label">RESEARCH × PRACTICE × ASIA</div>
+      <h1>ACT-<span class="accent">PRENEUR</span><br>INTERNATIONAL<br>SYMPOSIUM 2027</h1>
+      <div class="hero-subtitle">FROM MINDSET TO ACTION</div>
+      <div class="hero-meta">
+        <div class="meta-pill">14 APRIL 2027</div>
+        <div class="meta-pill">SEOUL, KOREA</div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn primary" href="#register" data-ko="등록" data-en="REGISTER">등록</a>
+        <a class="btn ghost" href="#works" data-ko="프로그램 보기" data-en="VIEW PROGRAM">프로그램 보기</a>
+      </div>
+    </div>
+    <div class="hero-side reveal">
+      <div class="hero-photo">
+        <img src="https://cdn.imweb.me/upload/S20250507cce6140360ec1/c7021f72ed041.png" alt="Symposium">
+      </div>
+      <div class="hero-info">
+        <b>ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027</b>
+        <strong>Research × Practice × Asia</strong>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section dark" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker" data-ko="01 · ACT-PRENEUR & THE SYMPOSIUM" data-en="01 · ACT-PRENEUR & THE SYMPOSIUM">01 · ACT-PRENEUR & THE SYMPOSIUM</div>
+      <div>
+        <h2 data-ko="Act-preneur를 이해하고,<br>그 지식과 경험을 함께 연구합니다." data-en="Understanding Act-preneur,<br>and studying its knowledge and experience together.">Act-preneur를 이해하고,<br>그 지식과 경험을 함께 연구합니다.</h2>
+        <p data-ko="Act-preneur는 기회를 발견하고 스스로 판단하며, 실제 행동을 통해 변화와 성과를 만들어가는 창업가형 인재를 의미합니다. ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027은 이러한 인재의 실행과 성장에 관한 연구와 현장 인사이트를 공유하고, 아시아 각국의 다양한 관점을 함께 살펴보는 자리입니다." data-en="Act-preneur refers to entrepreneurial talent that identifies opportunities, makes independent judgments, and creates change and performance through action. ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027 brings together research and field insights on how such talent acts and grows, while sharing diverse perspectives from across Asia.">Act-preneur는 기회를 발견하고 스스로 판단하며, 실제 행동을 통해 변화와 성과를 만들어가는 창업가형 인재를 의미합니다. ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027은 이러한 인재의 실행과 성장에 관한 연구와 현장 인사이트를 공유하고, 아시아 각국의 다양한 관점을 함께 살펴보는 자리입니다.</p>
+      </div>
+    </div>
+
+    <div class="about-grid">
+      <div class="panel about-copy reveal">
+        <div class="kicker" data-ko="WHAT IS ACT-PRENEUR?" data-en="WHAT IS ACT-PRENEUR?">WHAT IS ACT-PRENEUR?</div>
+        <h3 data-ko="실행을 통해 변화와 성과를 만들어가는 창업가형 인재" data-en="Entrepreneurial talent that creates change and performance through action">실행을 통해 변화와 성과를 만들어가는 창업가형 인재</h3>
+        <p data-ko="심포지엄은 창업가형 인재가 가진 관점과 역량이 실제 행동으로 이어지고, 그 행동이 성장과 성과로 연결되는 과정에 주목합니다." data-en="The symposium focuses on how entrepreneurial mindsets and capabilities are translated into action, and how that action leads to growth and performance.">심포지엄은 창업가형 인재가 가진 관점과 역량이 실제 행동으로 이어지고, 그 행동이 성장과 성과로 연결되는 과정에 주목합니다.</p>
+      </div>
+
+      <div class="panel framework reveal">
+        <div class="framework-top">
+          <div><div class="kicker">FROM MINDSET TO ACTION</div><h3>ACT-PRENEUR FRAME</h3></div>
+          <span data-ko="ACTION을 중심으로 보는 핵심 요소" data-en="Core elements centered on ACTION">ACTION을 중심으로 보는 핵심 요소</span>
+        </div>
+        <div class="framework-flow">
+          <div class="flow-card"><div class="n">01</div><h4>MINDSET</h4><p data-ko="기회를 바라보고 도전하는 관점" data-en="A mindset for recognizing opportunities and taking on challenges">기회를 바라보고 도전하는 관점</p></div>
+          <div class="flow-card"><div class="n">02</div><h4>CAPABILITY</h4><p data-ko="기회를 구체화하고 자원을 활용하는 역량" data-en="The capability to shape opportunities and mobilize resources">기회를 구체화하고 자원을 활용하는 역량</p></div>
+          <div class="flow-card action"><div class="n">03</div><h4>ACTION</h4><p data-ko="판단과 역량을 실제 실행으로 전환" data-en="Turning judgment and capability into real action">판단과 역량을 실제 실행으로 전환</p></div>
+          <div class="flow-card"><div class="n">04</div><h4>PERFORMANCE</h4><p data-ko="실행을 통해 만들어지는 성장과 성과" data-en="Growth and performance created through action">실행을 통해 만들어지는 성장과 성과</p></div>
+        </div>
+        <div class="environment">
+          <span class="env-label">ENVIRONMENT</span>
+          <span class="env-item">Organization</span>
+          <span class="env-item">Market</span>
+          <span class="env-item">Institution</span>
+          <span class="env-item">Culture</span>
+          <span class="env-item">Ecosystem</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cream" id="vision">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker" data-ko="02 · VISION" data-en="02 · VISION">02 · VISION</div>
+      <div>
+        <h2 data-ko="연구와 현장의 지식을 공유하고,<br>다양한 관점을 연결합니다." data-en="Sharing research and field knowledge,<br>connecting diverse perspectives.">연구와 현장의 지식을 공유하고,<br>다양한 관점을 연결합니다.</h2>
+        <p data-ko="Act-preneur를 둘러싼 연구와 현장 인사이트를 함께 나누고, 아시아 각국의 다양한 관점을 연결해 새로운 연구와 협력의 가능성을 확장합니다." data-en="We share research and field insights on Act-preneur, connect perspectives from across Asia, and expand opportunities for future research and collaboration.">Act-preneur를 둘러싼 연구와 현장 인사이트를 함께 나누고, 아시아 각국의 다양한 관점을 연결해 새로운 연구와 협력의 가능성을 확장합니다.</p>
+      </div>
+    </div>
+    <div class="vision-grid">
+      <div class="panel vision-card reveal"><div class="orb"></div><h3>SHARE</h3><p data-ko="창업가형 인재의 실행과 성장에 관한 연구와 현장 인사이트를 공유합니다." data-en="We share research and field insights on the action and growth of entrepreneurial talent.">창업가형 인재의 실행과 성장에 관한 연구와 현장 인사이트를 공유합니다.</p></div>
+      <div class="panel vision-card reveal"><div class="orb"></div><h3>CONNECT</h3><p data-ko="아시아 각국의 연구자, 기업, 창업 현장의 다양한 관점을 연결합니다." data-en="We connect diverse perspectives from researchers, companies, and entrepreneurial ecosystems across Asia.">아시아 각국의 연구자, 기업, 창업 현장의 다양한 관점을 연결합니다.</p></div>
+      <div class="panel vision-card reveal"><div class="orb"></div><h3>EXPAND</h3><p data-ko="심포지엄에서 형성된 논의와 관계를 새로운 연구와 협력으로 확장합니다." data-en="We expand discussions and relationships formed at the symposium into new research and collaboration.">심포지엄에서 형성된 논의와 관계를 새로운 연구와 협력으로 확장합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="overview">
+  <div class="wrap">
+    <div class="overview-title reveal">
+      <div class="kicker" data-ko="03 · SYMPOSIUM OVERVIEW" data-en="03 · SYMPOSIUM OVERVIEW">03 · SYMPOSIUM OVERVIEW</div>
+      <div class="overview-copy">
+        <h3>Act-preneur International Symposium 2027</h3>
+        <p class="overview-desc" data-ko="창업가형 인재의 실행과 성장에 관한 연구와 현장 인사이트를 공유하는 국제 심포지엄입니다." data-en="An international symposium sharing research and field insights on the action and growth of entrepreneurial talent.">창업가형 인재의 실행과 성장에 관한 연구와 현장 인사이트를 공유하는 국제 심포지엄입니다.</p>
+      </div>
+    </div>
+
+    <div class="overview-layout">
+      <div class="reveal">
+        <div class="overview-grid panel" style="border:none;border-radius:22px;overflow:hidden;background:none">
+          <div class="fact"><b>EVENT NAME</b><strong>Act-preneur International Symposium 2027</strong><span>Theme · From Mindset to Action</span></div>
+          <div class="fact"><b>DATE & TIME</b><strong data-ko="2027.04.14. (수) · 13:00–20:30" data-en="APR 14, 2027 · 13:00–20:30">2027.04.14. (수) · 13:00–20:30</strong><span data-ko="오후 심포지엄 + 저녁 네트워킹" data-en="Afternoon symposium + evening networking">오후 심포지엄 + 저녁 네트워킹</span></div>
+          <div class="fact"><b>VENUE</b><strong data-ko="대한상공회의소 · 서울" data-en="Korea Chamber of Commerce & Industry · Seoul">대한상공회의소 · 서울</strong><span data-ko="세부 장소 안내 추후 공지" data-en="Detailed venue information to be announced">세부 장소 안내 추후 공지</span></div>
+          <div class="fact"><b>FORMAT</b><strong>International Symposium + Research Forum + Networking</strong><span data-ko="공통 세션 · 병렬 프로그램 · 네트워킹" data-en="Plenary sessions · Parallel programs · Networking">공통 세션 · 병렬 프로그램 · 네트워킹</span></div>
+          <div class="fact"><b>CORE PROGRAM</b><strong>ACTPRENEUR STAGE · LAB · CONNECT</strong><span data-ko="발표 · 토론 · 교류 프로그램" data-en="Presentations · Discussion · Networking">발표 · 토론 · 교류 프로그램</span></div>
+          <div class="fact"><b>HOST & ORGANIZER</b><strong>underdogs.</strong><span data-ko="주최 · 주관 · 연구 및 프로그램 운영" data-en="Host · Organizer · Research & Program Operations">주최 · 주관 · 연구 및 프로그램 운영</span></div>
+          <div class="fact"><b>LANGUAGE</b><strong>Korean · English</strong><span data-ko="주요 국제 세션 한·영 운영" data-en="Korean · English for major international sessions">주요 국제 세션 한·영 운영</span></div>
+          <div class="fact"><b>PARTICIPATION</b><strong>Invitation + Pre-registration</strong><span data-ko="연구자·파트너 초청 + 일반 사전등록" data-en="Invitation for researchers/partners + public pre-registration">연구자·파트너 초청 + 일반 사전등록</span></div>
+          <div class="fact"><b>ASIA PARTICIPATION</b><strong>Korea · China · Japan · India · Indonesia</strong><span data-ko="5개국 연구자 및 파트너 참여" data-en="Researchers and partners from five countries">5개국 연구자 및 파트너 참여</span></div>
+          <div class="fact"><b>EXPECTED PARTICIPANTS</b><strong data-ko="200명" data-en="200 Participants">200명</strong><span data-ko="연구자 · 대학 · 기업 · 창업가 · 생태계 · 정책기관" data-en="Researchers · Universities · Companies · Entrepreneurs · Ecosystem · Public sector">연구자 · 대학 · 기업 · 창업가 · 생태계 · 정책기관</span></div>
+        </div>
+      </div>
+
+      <div class="panel side-box reveal">
+        <div class="kicker">PARTICIPATION & PARTNERSHIP</div>
+        <h3>Research · Innovation · Entrepreneurship Ecosystem Partners</h3>
+        <p data-ko="ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027은 연구자, 대학, 기업, 창업 생태계 파트너가 함께 참여하는 국제 심포지엄입니다. 학술 교류와 프로그램 운영, 네트워킹 확장을 위해 다양한 파트너십을 함께 구성합니다." data-en="ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027 brings together researchers, universities, companies, and entrepreneurship ecosystem partners. Partnerships support academic exchange, program participation, and networking.">ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027은 연구자, 대학, 기업, 창업 생태계 파트너가 함께 참여하는 국제 심포지엄입니다. 학술 교류와 프로그램 운영, 네트워킹 확장을 위해 다양한 파트너십을 함께 구성합니다.</p>
+
+        <div class="partner-cards">
+          <div class="partner-card"><b>ACADEMIC PARTNERSHIP</b><strong>Universities · Research Institutions</strong><span data-ko="대학 · 연구기관 협력" data-en="Universities · Research Institutions">대학 · 연구기관 협력</span></div>
+          <div class="partner-card"><b>CORPORATE PARTNERSHIP</b><strong>Corporate · Organization · Innovation Partners</strong><span data-ko="기업 · 조직 · 혁신 파트너" data-en="Corporate · Organization · Innovation Partners">기업 · 조직 · 혁신 파트너</span></div>
+          <div class="partner-card"><b>ECOSYSTEM PARTNERSHIP</b><strong>Entrepreneurship · Investment · Policy Ecosystem</strong><span data-ko="창업 · 투자 · 정책 생태계 파트너" data-en="Entrepreneurship · Investment · Policy Ecosystem Partners">창업 · 투자 · 정책 생태계 파트너</span></div>
+        </div>
+
+        <div class="side-actions">
+          <a class="btn dark" href="#register">REGISTER INTEREST</a>
+          <a class="btn secondary" href="#register">PARTNERSHIP INQUIRY</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cream" id="works">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker" data-ko="04 · HOW THE SYMPOSIUM WORKS" data-en="04 · HOW THE SYMPOSIUM WORKS">04 · HOW THE SYMPOSIUM WORKS</div>
+      <div>
+        <h2>STAGE · LAB · CONNECT</h2>
+        <p data-ko="세 가지 프로그램을 통해 발표, 토론, 교류가 함께 진행됩니다. 각 프로그램을 클릭해 세부 내용을 확인하세요." data-en="Three program tracks bring together presentations, discussion, and networking. Select each program to view details.">세 가지 프로그램을 통해 발표, 토론, 교류가 함께 진행됩니다. 각 프로그램을 클릭해 세부 내용을 확인하세요.</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="tab-nav">
+        <button class="tab-btn active" data-tab="stage"><small>CORE PROGRAM 01</small><strong>ACTPRENEUR STAGE</strong><span data-ko="연구와 현장 인사이트를 공유하는 메인 프로그램" data-en="Main program for sharing research and field insights" data-ko="연구와 현장 인사이트를 공유하는 메인 프로그램" data-en="Main program for sharing research and field insights">연구와 현장 인사이트를 공유하는 메인 프로그램</span></button>
+        <button class="tab-btn" data-tab="lab"><small>CORE PROGRAM 02</small><strong>ACTPRENEUR LAB</strong><span data-ko="주요 주제를 깊이 논의하는 소규모 프로그램" data-en="Small-group program for in-depth discussion" data-ko="주요 주제를 깊이 논의하는 소규모 프로그램" data-en="Small-group program for in-depth discussion">주요 주제를 깊이 논의하는 소규모 프로그램</span></button>
+        <button class="tab-btn" data-tab="connect"><small>CORE PROGRAM 03</small><strong>ACTPRENEUR CONNECT</strong><span data-ko="참가자와 연구자, 기관이 교류하는 프로그램" data-en="Networking program connecting participants, researchers, and institutions" data-ko="참가자와 연구자, 기관이 교류하는 프로그램" data-en="Networking program connecting participants, researchers, and institutions">참가자와 연구자, 기관이 교류하는 프로그램</span></button>
+      </div>
+
+      <div class="tab-panel panel active" id="tab-stage">
+        <div class="program-panel">
+          <div class="program-grid">
+            <div class="program-overview">
+              <div class="kicker">STAGE</div>
+              <h3>SHARE</h3>
+              <div class="verb" data-ko="연구와 현장 인사이트를 공유하는 메인 프로그램" data-en="Main program for sharing research and field insights" data-ko="연구와 현장 인사이트를 공유하는 메인 프로그램" data-en="Main program for sharing research and field insights">연구와 현장 인사이트를 공유하는 메인 프로그램</div>
+              <p data-ko="창업가형 인재의 성장·실행·성과에 관한 연구와 Evidence를 공유합니다." data-en="Sharing research and evidence on the growth, action, and performance of entrepreneurial talent.">창업가형 인재의 성장·실행·성과에 관한 연구와 Evidence를 공유합니다.</p>
+            </div>
+            <div class="program-list">
+              <div class="program-item"><b>01</b><strong>Academic Keynote</strong></div>
+              <div class="program-item"><b>02</b><strong>Act-preneur Research Session</strong></div>
+              <div class="program-item"><b>03</b><strong>Asia Research Dialogue</strong></div>
+              <div class="program-item"><b>04</b><strong>Panel Discussion</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel panel" id="tab-lab">
+        <div class="program-panel">
+          <div class="program-grid">
+            <div class="program-overview">
+              <div class="kicker">LAB</div>
+              <h3>DISCUSS</h3>
+              <div class="verb" data-ko="연구자와 현장 전문가가 주요 주제를 깊이 논의하는 소규모 프로그램" data-en="Small-group program for in-depth discussion among researchers and practitioners" data-ko="연구자와 현장 전문가가 주요 주제를 깊이 논의하는 소규모 프로그램" data-en="A small-group program for in-depth discussion among researchers and practitioners">연구자와 현장 전문가가 주요 주제를 깊이 논의하는 소규모 프로그램</div>
+              <p data-ko="Act-preneur의 정의·측정·환경·성과·국가 비교를 중심으로 토론합니다." data-en="Discussion focuses on definition, measurement, environment, performance, and cross-country comparison of Act-preneur.">Act-preneur의 정의·측정·환경·성과·국가 비교를 중심으로 토론합니다.</p>
+            </div>
+            <div class="program-list">
+              <div class="program-item"><b>01</b><strong>Research Circle</strong></div>
+              <div class="program-item"><b>02</b><strong>Research × Practice Discussion</strong></div>
+              <div class="program-item"><b>03</b><strong>Professor Roundtable</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel panel" id="tab-connect">
+        <div class="program-panel">
+          <div class="program-grid">
+            <div class="program-overview">
+              <div class="kicker">CONNECT</div>
+              <h3>CONNECT</h3>
+              <div class="verb" data-ko="참가자와 연구자, 기관이 만나 교류하는 네트워킹 프로그램" data-en="Networking program connecting participants, researchers, and institutions" data-ko="참가자와 연구자, 기관이 만나 교류하는 네트워킹 프로그램" data-en="A networking program connecting participants, researchers, and institutions">참가자와 연구자, 기관이 만나 교류하는 네트워킹 프로그램</div>
+              <p data-ko="연구 관심사와 데이터, 협력 가능성을 기준으로 다양한 참가자를 연결합니다." data-en="Participants connect around research interests, data, and opportunities for collaboration.">연구 관심사와 데이터, 협력 가능성을 기준으로 다양한 참가자를 연결합니다.</p>
+            </div>
+            <div class="program-list">
+              <div class="program-item"><b>01</b><strong>Research Match</strong></div>
+              <div class="program-item"><b>02</b><strong>Research Poster</strong></div>
+              <div class="program-item"><b>03</b><strong>Data Bar</strong></div>
+              <div class="program-item"><b>04</b><strong>Table Night</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="speakers">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker" data-ko="05 · KEYNOTE & SPEAKERS" data-en="05 · KEYNOTE & SPEAKERS">05 · KEYNOTE & SPEAKERS</div>
+      <div>
+        <h2>KEYNOTE & FEATURED SPEAKERS</h2>
+        <p data-ko="창업가형 인재, 기업가정신, 조직, 혁신을 연구하는 국내외 연구자와 현장 전문가가 함께합니다." data-en="Researchers and practitioners working on entrepreneurial talent, entrepreneurship, organizations, and innovation will join the symposium.">창업가형 인재, 기업가정신, 조직, 혁신을 연구하는 국내외 연구자와 현장 전문가가 함께합니다.</p>
+      </div>
+    </div>
+
+    <div class="speaker-layout">
+      <div class="panel keynote reveal">
+        <span class="keynote-badge">ACADEMIC KEYNOTE · TBC</span>
+        <h3>From Capability<br>to Action</h3>
+        <div class="role">Entrepreneurial Talent and Performance in a Changing Asia</div>
+        <p data-ko="Entrepreneurship, Organizational Behavior, Innovation 관점에서 창업가형 인재의 실행과 성과를 조망하는 Opening Keynote입니다." data-en="An opening keynote examining entrepreneurial action and performance through the lenses of entrepreneurship, organizational behavior, and innovation.">Entrepreneurship, Organizational Behavior, Innovation 관점에서 창업가형 인재의 실행과 성과를 조망하는 Opening Keynote입니다.</p>
+        <div class="keynote-topic"><b>KEYNOTE SPEAKER</b><strong>To be announced</strong></div>
+      </div>
+
+      <div class="speaker-stack reveal">
+        <div class="panel speaker-card"><div class="speaker-card-grid"><div class="country">KOREA</div><div><strong data-ko="KAIST · Seoul National University · Korea University, etc." data-en="KAIST · Seoul National University · Korea University, etc.">KAIST · Seoul National University · Korea University, etc.</strong><p data-ko="Technology · Resource Access · Organization" data-en="Technology · Resource Access · Organization">Technology · Resource Access · Organization</p></div><span class="status">TBC</span></div></div>
+        <div class="panel speaker-card"><div class="speaker-card-grid"><div class="country">CHINA</div><div><strong data-ko="University · In Discussion" data-en="University · In Discussion">University · In Discussion</strong><p>Institution · Entrepreneurship · Scale</p></div><span class="status">IN DISCUSSION</span></div></div>
+        <div class="panel speaker-card"><div class="speaker-card-grid"><div class="country">JAPAN</div><div><strong data-ko="Hitotsubashi University" data-en="Hitotsubashi University">Hitotsubashi University</strong><p data-ko="Organization · Innovation · Role Transition" data-en="Organization · Innovation · Role Transition">Organization · Innovation · Role Transition</p></div><span class="status">TBC</span></div></div>
+        <div class="panel speaker-card"><div class="speaker-card-grid"><div class="country">INDIA</div><div><strong data-ko="University · In Discussion" data-en="University · In Discussion">University · In Discussion</strong><p data-ko="Entrepreneurship · Innovation · Growth" data-en="Entrepreneurship · Innovation · Growth">Entrepreneurship · Innovation · Growth</p></div><span class="status">IN DISCUSSION</span></div></div>
+        <div class="panel speaker-card"><div class="speaker-card-grid"><div class="country">INDONESIA</div><div><strong data-ko="Universitas Ciputra" data-en="Universitas Ciputra">Universitas Ciputra</strong><p data-ko="Entrepreneurship · Creative Industry · Innovation" data-en="Entrepreneurship · Creative Industry · Innovation">Entrepreneurship · Creative Industry · Innovation</p></div><span class="status">TBC</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section white" id="schedule">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker" data-ko="06 · PROGRAM SCHEDULE" data-en="06 · PROGRAM SCHEDULE">06 · PROGRAM SCHEDULE</div>
+      <div>
+        <h2>PROGRAM SCHEDULE</h2>
+        <p data-ko="2027년 4월 14일(수) 예정 프로그램입니다. 세션명과 시간은 추후 확정 과정에서 변경될 수 있습니다." data-en="Provisional program for Wednesday, April 14, 2027. Session titles and times are subject to change.">2027년 4월 14일(수) 예정 프로그램입니다. 세션명과 시간은 추후 확정 과정에서 변경될 수 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="schedule reveal">
+      <div class="time-row"><div class="time">13:00–13:30</div><div class="panel session"><strong>Registration & Welcome</strong></div></div>
+      <div class="time-row"><div class="time">13:30–13:50</div><div class="panel session"><strong>Opening Session</strong></div></div>
+      <div class="time-row"><div class="time">13:50–14:30</div><div class="panel session"><strong>Academic Keynote</strong></div></div>
+      <div class="time-row"><div class="time">14:30–15:10</div><div class="panel session"><strong>Act-preneur Research Session</strong></div></div>
+      <div class="time-row"><div class="time">15:10–15:30</div><div class="panel session"><strong>Break & Networking</strong></div></div>
+      <div class="time-row">
+        <div class="time">15:30–17:20</div>
+        <div class="panel session">
+          <strong>Parallel Sessions</strong>
+          <div class="parallel">
+            <div class="track"><b>STAGE</b><span>Asia Research Dialogue · Research Talks</span></div>
+            <div class="track"><b>LAB</b><span>Research Circle · Roundtable</span></div>
+            <div class="track"><b>CONNECT</b><span>Research Match · Data Bar</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="time-row"><div class="time">17:40–18:30</div><div class="panel session"><strong>Comparative Research Panel / Roundtable</strong></div></div>
+      <div class="time-row"><div class="time">18:30–19:00</div><div class="panel session"><strong>Closing Session</strong></div></div>
+      <div class="time-row"><div class="time">19:00–20:30</div><div class="panel session"><strong>Act-preneur Table Night</strong></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="asia">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker" data-ko="07 · ASIA PERSPECTIVES" data-en="07 · ASIA PERSPECTIVES">07 · ASIA PERSPECTIVES</div>
+      <div>
+        <h2 data-ko="FIVE ASIAN PERSPECTIVES" data-en="FIVE ASIAN PERSPECTIVES">FIVE ASIAN PERSPECTIVES</h2>
+        <p data-ko="한국·중국·일본·인도·인도네시아의 성장 환경과 인재 육성·성장 방식, 그리고 기업가적 실행의 특징을 함께 살펴봅니다." data-en="Explore how growth contexts, talent development approaches, and entrepreneurial action differ across Korea, China, Japan, India, and Indonesia.">한국·중국·일본·인도·인도네시아의 성장 환경과 인재 육성·성장 방식, 그리고 기업가적 실행의 특징을 함께 살펴봅니다.</p>
+      </div>
+    </div>
+
+    <div class="asia-grid">
+      <div class="panel asia-card reveal">
+        <b>01</b>
+        <h3>KOREA</h3>
+        <div class="asia-axis">
+          <b data-ko="01 · GROWTH CONTEXT" data-en="01 · GROWTH CONTEXT">01 · GROWTH CONTEXT</b>
+          <strong data-ko="AI · Content · Healthcare" data-en="AI · Content · Healthcare">AI · Content · Healthcare</strong>
+        </div>
+        <div class="asia-axis">
+          <b data-ko="02 · GROWTH & DEVELOPMENT" data-en="02 · GROWTH & DEVELOPMENT">02 · GROWTH & DEVELOPMENT</b>
+          <strong data-ko="시장 검증 · 프로젝트 기반 성장 · 글로벌 경험" data-en="Market Validation · Project-based Growth · Global Exposure">시장 검증 · 프로젝트 기반 성장 · 글로벌 경험</strong>
+        </div>
+        <div class="asia-axis action">
+          <b data-ko="03 · ENTREPRENEURIAL ACTION" data-en="03 · ENTREPRENEURIAL ACTION">03 · ENTREPRENEURIAL ACTION</b>
+          <strong>Validate → Grow → Globalize</strong>
+        </div>
+      </div>
+
+      <div class="panel asia-card reveal">
+        <b>02</b>
+        <h3>CHINA</h3>
+        <div class="asia-axis">
+          <b data-ko="01 · GROWTH CONTEXT" data-en="01 · GROWTH CONTEXT">01 · GROWTH CONTEXT</b>
+          <strong data-ko="AI · EV · Robotics · Semiconductor" data-en="AI · EV · Robotics · Semiconductor">AI · EV · Robotics · Semiconductor</strong>
+        </div>
+        <div class="asia-axis">
+          <b data-ko="02 · GROWTH & DEVELOPMENT" data-en="02 · GROWTH & DEVELOPMENT">02 · GROWTH & DEVELOPMENT</b>
+          <strong data-ko="산업 현장 노출 · 빠른 학습 · 스케일 지향 성장" data-en="Industrial Exposure · Rapid Learning · Scale-oriented Development">산업 현장 노출 · 빠른 학습 · 스케일 지향 성장</strong>
+        </div>
+        <div class="asia-axis action">
+          <b data-ko="03 · ENTREPRENEURIAL ACTION" data-en="03 · ENTREPRENEURIAL ACTION">03 · ENTREPRENEURIAL ACTION</b>
+          <strong>Identify → Industrialize → Scale</strong>
+        </div>
+      </div>
+
+      <div class="panel asia-card reveal">
+        <b>03</b>
+        <h3>JAPAN</h3>
+        <div class="asia-axis">
+          <b data-ko="01 · GROWTH CONTEXT" data-en="01 · GROWTH CONTEXT">01 · GROWTH CONTEXT</b>
+          <strong data-ko="Deep Tech · Robotics · Space" data-en="Deep Tech · Robotics · Space">Deep Tech · Robotics · Space</strong>
+        </div>
+        <div class="asia-axis">
+          <b data-ko="02 · GROWTH & DEVELOPMENT" data-en="02 · GROWTH & DEVELOPMENT">02 · GROWTH & DEVELOPMENT</b>
+          <strong data-ko="전문성 축적 · 조직 학습 · 장기적 역량 개발" data-en="Expertise Building · Organizational Learning · Long-term Development">전문성 축적 · 조직 학습 · 장기적 역량 개발</strong>
+        </div>
+        <div class="asia-axis action">
+          <b data-ko="03 · ENTREPRENEURIAL ACTION" data-en="03 · ENTREPRENEURIAL ACTION">03 · ENTREPRENEURIAL ACTION</b>
+          <strong>Develop → Implement → Sustain</strong>
+        </div>
+      </div>
+
+      <div class="panel asia-card reveal">
+        <b>04</b>
+        <h3>INDIA</h3>
+        <div class="asia-axis">
+          <b data-ko="01 · GROWTH CONTEXT" data-en="01 · GROWTH CONTEXT">01 · GROWTH CONTEXT</b>
+          <strong data-ko="IT/SaaS · Fintech · Deep Tech" data-en="IT/SaaS · Fintech · Deep Tech">IT/SaaS · Fintech · Deep Tech</strong>
+        </div>
+        <div class="asia-axis">
+          <b data-ko="02 · GROWTH & DEVELOPMENT" data-en="02 · GROWTH & DEVELOPMENT">02 · GROWTH & DEVELOPMENT</b>
+          <strong data-ko="실험 · 문제 해결 · 자기주도 성장" data-en="Experimentation · Problem Solving · Self-directed Growth">실험 · 문제 해결 · 자기주도 성장</strong>
+        </div>
+        <div class="asia-axis action">
+          <b data-ko="03 · ENTREPRENEURIAL ACTION" data-en="03 · ENTREPRENEURIAL ACTION">03 · ENTREPRENEURIAL ACTION</b>
+          <strong>Experiment → Build → Scale</strong>
+        </div>
+      </div>
+
+      <div class="panel asia-card reveal">
+        <b>05</b>
+        <h3>INDONESIA</h3>
+        <div class="asia-axis">
+          <b data-ko="01 · GROWTH CONTEXT" data-en="01 · GROWTH CONTEXT">01 · GROWTH CONTEXT</b>
+          <strong data-ko="Fintech · E-commerce · Digital Services" data-en="Fintech · E-commerce · Digital Services">Fintech · E-commerce · Digital Services</strong>
+        </div>
+        <div class="asia-axis">
+          <b data-ko="02 · GROWTH & DEVELOPMENT" data-en="02 · GROWTH & DEVELOPMENT">02 · GROWTH & DEVELOPMENT</b>
+          <strong data-ko="현지 문제 해결 · 적응형 학습 · 생태계 기반 성장" data-en="Local Problem Solving · Adaptive Learning · Ecosystem-based Growth">현지 문제 해결 · 적응형 학습 · 생태계 기반 성장</strong>
+        </div>
+        <div class="asia-axis action">
+          <b data-ko="03 · ENTREPRENEURIAL ACTION" data-en="03 · ENTREPRENEURIAL ACTION">03 · ENTREPRENEURIAL ACTION</b>
+          <strong>Adapt → Solve → Iterate</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cream" id="who">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker" data-ko="08 · WHO WILL JOIN" data-en="08 · WHO WILL JOIN">08 · WHO WILL JOIN</div>
+      <div>
+        <h2>WHO WILL JOIN</h2>
+        <p data-ko="연구자, 기업·조직 리더, 창업가, 창업 생태계와 정책기관 관계자가 함께합니다." data-en="Researchers, corporate and organizational leaders, entrepreneurs, ecosystem partners, and public-sector professionals will join.">연구자, 기업·조직 리더, 창업가, 창업 생태계와 정책기관 관계자가 함께합니다.</p>
+      </div>
+    </div>
+    <div class="who-grid">
+      <div class="panel who-card reveal"><b>ACADEMIA</b><strong>Professors · Researchers</strong><p data-ko="기업가정신·조직·혁신 분야 연구자" data-en="Researchers in entrepreneurship, organization, and innovation">기업가정신·조직·혁신 분야 연구자</p></div>
+      <div class="panel who-card reveal"><b>CORPORATE</b><strong>HR · Organization · Innovation Leaders</strong><p data-ko="조직과 인재의 실행 환경을 설계하는 실무 리더" data-en="Leaders designing environments for organizational and talent action">조직과 인재의 실행 환경을 설계하는 실무 리더</p></div>
+      <div class="panel who-card reveal"><b>ENTREPRENEURS</b><strong>Founders · Startup Teams</strong><p data-ko="기회를 실제 행동과 사업 성장으로 전환하는 실행자" data-en="Entrepreneurs turning opportunities into action and business growth">기회를 실제 행동과 사업 성장으로 전환하는 실행자</p></div>
+      <div class="panel who-card reveal"><b>ECOSYSTEM</b><strong>Accelerators · Investors</strong><p data-ko="창업가와 조직의 실행을 지원하는 생태계 기관" data-en="Ecosystem organizations supporting entrepreneurs and organizations">창업가와 조직의 실행을 지원하는 생태계 기관</p></div>
+      <div class="panel who-card reveal"><b>PUBLIC / POLICY</b><strong>Public Institutions · Policy Researchers</strong><p data-ko="창업·인재·혁신 정책 관계자" data-en="Professionals in entrepreneurship, talent, and innovation policy">창업·인재·혁신 정책 관계자</p></div>
+      <div class="panel who-card reveal"><b>DATA & RESEARCH</b><strong>Research Labs · Data · Impact</strong><p data-ko="현장 Evidence와 측정체계를 구축하는 연구 파트너" data-en="Research partners building field evidence and measurement systems">현장 Evidence와 측정체계를 구축하는 연구 파트너</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="register" id="register">
+  <div class="wrap reveal">
+    <div class="kicker" style="color:#0b5f66;margin-bottom:18px" data-ko="09 · REGISTRATION & PARTNERSHIP" data-en="09 · REGISTRATION & PARTNERSHIP">09 · REGISTRATION & PARTNERSHIP</div>
+    <h2 data-ko="심포지엄에 함께하세요." data-en="JOIN THE SYMPOSIUM.">심포지엄에 함께하세요.</h2>
+    <p data-ko="행사 참가 신청과 주요 업데이트를 확인하세요. 연구협력 및 파트너십 문의도 함께 안내합니다." data-en="Check registration updates and participation information. Research collaboration and partnership inquiries are also welcome.">행사 참가 신청과 주요 업데이트를 확인하세요. 연구협력 및 파트너십 문의도 함께 안내합니다.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#" data-ko="등록 오픈 예정" data-en="REGISTRATION OPENING SOON">등록 오픈 예정</a>
+      <a class="btn secondary" href="#" data-ko="연구협력" data-en="RESEARCH COLLABORATION">연구협력</a>
+      <a class="btn secondary" href="#" data-ko="파트너십 문의" data-en="PARTNERSHIP INQUIRY">파트너십 문의</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div><strong>ACT-PRENEUR INTERNATIONAL SYMPOSIUM 2027</strong><br>From Mindset to Action</div>
+    <div>14 April 2027 · Seoul, Korea<br>Hosted by underdogs. · UD IMPACT</div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const buttons=document.querySelectorAll('.tab-btn');
+const panels=document.querySelectorAll('.tab-panel');
+buttons.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    buttons.forEach(b=>b.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    const panel=document.getElementById('tab-'+btn.dataset.tab);
+    if(panel) panel.classList.add('active');
+  });
+});
+
+function setLanguage(lang){
+  document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
+  document.querySelectorAll('[data-ko][data-en]').forEach(el=>{
+    el.innerHTML = lang === 'ko' ? el.dataset.ko : el.dataset.en;
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  localStorage.setItem('actpreneur-lang', lang);
+}
+document.querySelectorAll('.lang-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>setLanguage(btn.dataset.lang));
+});
+setLanguage(localStorage.getItem('actpreneur-lang') || 'ko');
+
+</script>
+</body>
+</html>
